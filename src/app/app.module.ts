@@ -42,6 +42,7 @@ import { HttpClientModule} from '@angular/common/http';
     imports: [
         BrowserModule.withServerTransition({ appId: 'serverApp' }),
         BrowserAnimationsModule,
+        BrowserTransferStateModule,
         MatMenuModule,
         MatButtonModule,
         MatIconModule,
