@@ -6,7 +6,7 @@ import * as express from 'express';
 import { readFileSync } from 'fs';
 import { enableProdMode } from '@angular/core';
 
-const {AppServerModuleNgFactory} = require('./dist-server/main.bundle');
+const {AppServerModuleNgFactory} = require('./dist-server/main');
 
 enableProdMode();
 
