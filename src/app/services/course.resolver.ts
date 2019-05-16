@@ -15,7 +15,7 @@ export class CourseResolver implements Resolve<Course> {
     constructor(
         private coursesService: CoursesService,
         @Inject(PLATFORM_ID) private platformId,
-        private transferState:TransferState
+        private transferState: TransferState
     ) {
 
     }

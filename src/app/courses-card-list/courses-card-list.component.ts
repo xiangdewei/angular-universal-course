@@ -1,7 +1,7 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {Course} from "../model/course";
-import {MatDialog, MatDialogConfig} from "@angular/material";
-import {CourseDialogComponent} from "../course-dialog/course-dialog.component";
+import {Course} from '../model/course';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import {CourseDialogComponent} from '../course-dialog/course-dialog.component';
 
 @Component({
     selector: 'courses-card-list',
@@ -20,7 +20,7 @@ export class CoursesCardListComponent implements OnInit {
 
     }
 
-    editCourse({description, longDescription, category}:Course) {
+    editCourse({description, longDescription, category}: Course) {
 
         const dialogConfig = new MatDialogConfig();
 
@@ -36,7 +36,7 @@ export class CoursesCardListComponent implements OnInit {
 
 
         dialogRef.afterClosed().subscribe(
-            val => console.log("Dialog output:", val)
+            val => console.log('Dialog output:', val)
         );
 
     }

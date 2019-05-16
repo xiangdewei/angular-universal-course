@@ -1,7 +1,7 @@
 import {Component, Inject, OnInit, ViewEncapsulation} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
-import {Course} from "../model/course";
-import {FormBuilder, Validators, FormGroup} from "@angular/forms";
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {Course} from '../model/course';
+import {FormBuilder, Validators, FormGroup} from '@angular/forms';
 import * as moment from 'moment';
 
 @Component({
@@ -12,13 +12,13 @@ import * as moment from 'moment';
 export class CourseDialogComponent implements OnInit {
 
     form: FormGroup;
-    description:string;
+    description: string;
 
     constructor(
         private fb: FormBuilder,
         private dialogRef: MatDialogRef<CourseDialogComponent>,
-        @Inject(MAT_DIALOG_DATA) {description,longDescription,
-            category}:Course ) {
+        @Inject(MAT_DIALOG_DATA) {description, longDescription,
+            category}: Course ) {
 
         this.description = description;
 
@@ -27,7 +27,7 @@ export class CourseDialogComponent implements OnInit {
             description: [description, Validators.required],
             category: [category, Validators.required],
             releasedAt: [moment(), Validators.required],
-            longDescription: [longDescription,Validators.required]
+            longDescription: [longDescription, Validators.required]
         });
 
     }

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Course} from "../model/course";
-import {Observable} from "rxjs/Observable";
-import {CoursesService} from "../services/courses.service";
+import {Course} from '../model/course';
+import {Observable} from 'rxjs/Observable';
+import {CoursesService} from '../services/courses.service';
 import {map, tap} from 'rxjs/operators';
 
 @Component({
@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
     courses$: Observable<Course[]>;
 
     constructor(private coursesService: CoursesService) {
-
     }
 
     ngOnInit() {
